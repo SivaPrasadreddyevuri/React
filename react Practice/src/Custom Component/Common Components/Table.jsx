@@ -1,25 +1,26 @@
 const Table = (props) => {
-  //   console.log("2", column);
-  //   console.log("2", );
+  const data = props.data;
+  const columns = props.columns;
+  console.log(columns);
   return (
     <>
       <table border={3} cellSpacing={0}>
         <thead>
           <tr>
-            {props.columns.map((heading, index) => {
+            {columns.map((heading, index) => {
               return <th key={index}>{heading}</th>;
             })}
           </tr>
         </thead>
         <tbody>
-          {props.data.map((data, Index) => {
-            return(
-              <tr key={Index}>
-                {props.columns.map((columns, index) => (
-                <td key={index}>{data[columns]}</td>
-                ))}
+          {data.map((data, index) => {
+            return (
+              <tr key={index}>
+                {columns.map((heading, index) => {
+                  return <td key={index}>{data[heading]}</td>;
+                })}
               </tr>
-            )
+            );
           })}
         </tbody>
       </table>

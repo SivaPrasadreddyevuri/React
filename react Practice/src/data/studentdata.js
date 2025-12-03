@@ -4,7 +4,8 @@ export const data = [
     Name: "Ravi",
     Age: 20,
     Group: "b",
-    Phone: "9876543210"
+    Phone: "9876543210",
+    isPresent:true
   },  
   {
     Sno: 2,
